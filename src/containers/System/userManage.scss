@@ -1,0 +1,43 @@
+.btn-edit, .btn-delete{
+    border: none;
+    outline: none;
+    background: white;
+    i{
+        color: rgba(grey,0.7);
+        font-size: 20px;
+    
+    }
+    &:hover{
+        background: white;
+        i{
+            color: grey;
+        }
+    }
+}
+.add-new{
+    background: rgba(grey,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    i{
+        font-size: 15px;
+        color: white;
+        margin-right: 5px;
+    }
+    &:hover{
+        background: grey;
+        color: white;
+    }
+}
+
+.modal-header{
+    .close{
+        background: none;
+        border: none;
+        font-size: 28px;
+        color: white;
+    }
+}

@@ -1,0 +1,100 @@
+.Login{
+    height: 100vh;
+    background: linear-gradient((135deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%));
+    &-form{
+        margin: auto;
+        // border: 1px solid grey;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 350px;
+        height: 570px;
+        border-radius: 15px!important;
+        background: white;
+        .form-input-password{
+            position: relative;
+            span{
+                i{
+                    position: absolute;
+                    cursor: pointer;
+                    color: rgba(grey, 0.7);
+                    top: 50%;
+                    right: 0%;
+                    transform: translate(-100%,50%);
+                    &:hover{
+                        color: grey;
+                    }
+                }
+            }
+        }
+        .err{
+            i{
+                color: red;
+                font-size: 14px;
+            }
+        }
+        .btn-submit{
+            margin: 10px;
+            width: 95%;
+            height: 38px;
+            background: linear-gradient((135deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%))!important;
+            border: none!important;
+            border-radius: 25px!important;
+            font-weight: bold;
+            font-size: 18px;
+            
+        }
+    }
+    .input{
+        border: none;
+        border-radius: 0px;
+        box-shadow: none;
+        border-bottom:2px solid rgba(grey, 0.2) ;
+        font-size: 18px;
+        &::placeholder{
+            color:rgba(grey, 0.7) ;
+            font-size: 20px;
+        }
+        &:focus{
+            border-bottom:2px solid #33ccff ;
+            &::placeholder{
+                opacity: 0;
+            }
+        }
+    }
+    .label{
+        color: rgba(grey, 0.6);
+        margin-left: 20px;
+    }
+    &-header{
+        text-align: center;
+        font-weight: bold;
+        font-size: 28px;
+    }
+    .Forgot-password{
+        font-size: 12px;
+    }
+    .social-login{
+        i{
+            font-size: 24px;
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            color: white;
+        }
+        .google{
+            background: rgb(206, 33, 33);
+        }
+        .fb{
+            background: #307aaf;
+        }
+        .tw{
+            background: #33ccff;
+        }
+    }
+}

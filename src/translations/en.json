@@ -1,0 +1,103 @@
+{
+    "homeheader":{
+        "speciality":"Medical specialty",
+        "searchdoctor":"Find a doctor",
+        "health-facility":"Health facilities",
+        "select-room":"Choose hospital clinic",
+        "doctor":"Doctor",
+        "select-doctor":"Choose a good doctor",
+        "Examination-package":"Examination Package",
+        "chek-health":"General health check",
+        "support":"support",
+        "welcome":"Welcome,"
+    },
+    "banner":{
+        "medical-background":"medical platform",
+        "health-care":"Comprehensive health care",
+        "specialist-examination":"specialist examination",
+        "remote-examination":"remote examination",
+        "general-examination":"general examination",
+        "medical-test":"medical test",
+        "mental-health":"mental health",
+        "dental-examination":"dental examination",
+        "surgery-package":"surgery package",
+        "medical-products":"medical products",
+        "business-health":"business health"
+    },
+    "specialty":{
+        "Popular-specialties":"Popular specialties",
+        "see-more":"SEE MORE",
+        "Musculoskeletal":"Musculoskeletal",
+        "Nerve":"Nerve",
+        "Digestion":"Digestion",
+        "Heart":"Heart",
+        "Ear-nose-study":"Ear nose study",
+        "Spine":"Spine",
+        "Traditional-medicine":"Traditional medicine",
+        "Acupuncture":"Acupuncture",
+        "Obstetrics-Gynecology":"Obstetrics and Gynecology",
+        "Supersonic":"Supersonic",
+        "Pediatrics":"Pediatrics",
+        "Dermatology":"Dermatology",
+        "Hepatitis":"Hepatitis",
+        "Mental-health":"Mental health",
+        "immune-allergy":"immune allergy",
+        "Lung":"Lung",
+        "Extranervous-system":"Extranervous system",
+        "Ophthalmology":"Ophthalmology",
+        "Urinary-kidney":"Urinary kidney",
+        "Medical":"Medical",
+        "General-examination":"General examination",
+        "dentistry":"dentistry"
+    },
+    "medical":{
+        "medical-facility":"Medical Facility",
+        "search":"Search",
+        "Vietduc":"Viet Duc Friendship Hospital",
+        "Choray":"Cho Ray Hospital",
+        "Yduoc":"Hospital of University of Medicine and Pharmacy 1",
+        "Benhvien108":"Center for Periodic Health Checkup, 108 Military Central Hospital",
+        "Hungviet":"Hung Viet Oncology Hospital",
+        "Medlatec":"MEDLATEC Health System",
+        "Diag":"Diag Laboratories",
+        "Thucuc":"Thu Cuc TCI Health System"
+    },
+    "doctor":{
+        "doctor-popular":"Last week's featured doctor",
+        "see-more":"SEE MORE"
+    },
+    "menu": {
+        "admin":{
+            "manage-user":"Users System",
+            "manage-doctor":"Manage doctor",
+            "manage-admin":"Manage Admin",
+            "crud":"CRUD user",
+            "crud-redux":"CRUD Redux",
+            "clinic":"Clinic",
+            "manage-clinic":"Manage clinic",
+            "specialty":"Specialty",
+            "manage-specialty":"Manage specialty",
+            "handbook":"Handbook",
+            "manage-handbook":"Manage handbook"
+        }
+    },
+    "manage-user":{
+        "add":"Add new",
+        "email":"Email",
+        "password":"password",
+        "first-name":"First name",
+        "last-name":"Last name",
+        "phone-number":"Phone number",
+        "address":"Address",
+        "action":"Action",
+        "gender":"Gender",
+        "position":"Position",
+        "role":"Role",
+        "image":"Avatar",
+        "submit":"Save",
+        "update":"Update",
+        "upload":"Upload",
+        "pla-email":"Enter email"
+
+    }
+}

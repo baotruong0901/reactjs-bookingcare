@@ -1,0 +1,34 @@
+@import "../../styles/common.scss";
+
+.header-container {
+  z-index: 99;
+  background-color: $colormain;
+  color: $common-text-color;
+  height: 40px;
+  position: relative;
+  .btn-logout {
+    color: $common-text-color;
+    line-height: 40px;
+    height: 40px;
+    padding: 0 10px;
+    &:hover {
+      background-color: darken($colormain, 5);
+    }
+    i {
+      font-size: $base-size + 1px;
+    }
+  }
+  .language-en,
+  .language-vi {
+    cursor: pointer;
+  }
+  .active{
+    color: yellow
+  }
+  .language-en {
+    margin-left: 5px;
+  }
+  .welcome{
+    margin-right: 10px;
+  }
+}

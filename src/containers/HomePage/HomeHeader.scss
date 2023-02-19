@@ -1,0 +1,257 @@
+
+ul,li{
+    text-decoration: none;
+    list-style: none;
+}
+.fixed{
+    position: sticky;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+}
+.home-header{
+    background: white;
+    height: 80px;
+    .home-header-content{
+        height: 80px;
+        .left-content{
+            button{
+       
+                border: none;
+                background-color: white;
+                i{
+                    font-size: 22px;
+                    color: rgba(grey, 0.9);
+                }
+            }
+            .header-logo{
+                background: url('../../assets/images/bookingcare-2020.svg') center no-repeat;
+                height: 40px;
+                aspect-ratio: auto 160 / 40;
+                width: 160px;
+                margin-left: 5px;
+            }
+        }
+        .center-content{
+            .child-content{
+                padding-top: 10px;
+                b{
+                    font-size: 0.872rem!important;
+                    font-weight: 600;
+                }
+                p{
+                    font-size: 0.725rem!important;
+                }
+            }
+
+        }
+        .right-content{
+            color: grey;
+            font-weight: bold;
+            .support{
+                cursor: pointer;
+                font-size: 1rem;
+                i{
+                    color: #45c3d2;
+                    padding-right: 2px;
+                    
+                }
+                
+            }
+            .flag{
+                margin-left: 10px;
+                cursor: pointer;
+                span{
+                    opacity: 0.3;
+                    margin-left: 5px;
+                    &:hover{
+                        color: orange;
+                    }
+                }
+                .action{
+                    opacity: 1;
+                    color: orange;
+                }
+            }
+        }
+    }
+}
+.home-header-banner{
+    position: relative;
+    .background-header{
+        background:url('../../assets/images/bookingcare-cover-4.jpeg');
+        background-repeat: no-repeat;;
+        background-position: center;
+        background-size: cover;
+        height: 43.375rem;
+        .box-content{
+            background:  linear-gradient(rgba(0,0,0,0.25), rgba(255,255,255,0.1));
+            height: 100%;
+            .box-content-top{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                text-shadow: 1px 1px black;
+            .title-top, .title-bottom{
+                text-transform: uppercase;
+            }
+            .title-top{
+                margin-top: 3.75rem;
+                p{
+                    font-size: 2rem;
+                }
+            }
+            .title-bottom{
+                margin-bottom: 1.25rem;
+                h2{
+                    font-size: 2.125rem;
+                    font-weight: 700;
+                }
+            }
+                .search-box{
+                    form{
+                        // width: 28.125rem;
+                        height: 50px;
+                        position: relative;
+                        
+                        input{
+                            padding-left: 60px;
+                            border: none;
+                            outline: none;
+                            background-color: #f7d800;
+                            width: 28.125rem;
+                            height: 100%;
+                            border-radius: 50px;
+                            font-size: 16px;
+                        }
+                        button{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 60px;
+                            height: 100%;
+                            background-color: #f7d800;
+                            border: none;
+                            border-radius: 50px;
+
+                        }
+                    }
+                }
+            }
+            .box-content-bottom{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background:  linear-gradient(rgba(255, 255, 255, 0.01),rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 1));;
+                width: 100vw;
+                .options{
+                    padding: 50px 10px 10px 10px;
+                    .option-child{
+                        .icon{
+                            background-color: white;
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            box-shadow: 1px 1px 2px rgba($color: #000000, $alpha: 0.4);
+                            margin: 2px auto;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: 32px;
+                            cursor: pointer;
+                        }
+                        .text{
+                            font-size: 1.1rem;
+                            font-weight: 600;
+                            text-align: center;
+                            color: rgba(black,0.7);
+                            transition: all 0.25s ease;
+                            &:hover{
+                                cursor: pointer;
+                                color: #45c3d2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+//mobie
+@media only screen and (max-width: 699px){
+    .center-content{
+        .child-content{
+            display: none;
+        }
+    }
+    .search-box{
+        form{
+            input{
+                width: 20rem!important;
+            }
+        }
+    }
+    .right-content{
+        .support{
+            margin-right: 0.5rem!important;
+            font-size: 1.075rem!important;
+        }
+        .flag{
+            display: none!important;
+        }
+    }
+    .background-header{
+        height: 46.375rem!important;
+    }
+    .title-top{
+        p{
+            font-size: 1.5rem!important;
+        }
+    }
+    .title-bottom{
+        h2{
+            font-size: 1.575rem!important;
+            text-align: center;
+            // font-weight: 700;
+        }
+    }
+}
+
+//tablet
+@media only screen and (min-width: 700px) and (max-width:960px){
+    .home-header{
+        background: white;
+        height: 120px!important;
+        position: relative;
+        .left-content{
+            margin-left: 1rem!important;
+        }
+        .center-content{
+            position: absolute;
+            bottom: 0;
+            left: 35%;
+            transform: translate(-25%,0%);
+            width: 65%;
+            .child-content{
+                b{
+                    font-size: 0.872rem!important;
+                    font-weight: 600;
+                }
+                p{
+                    font-size: 0.725rem!important;
+                }
+            }
+        }
+        .right-content{
+            position: absolute;
+            top: 25%;
+            right: 20px;
+        }
+    }
+    
+}

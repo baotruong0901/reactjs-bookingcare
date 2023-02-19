@@ -1,0 +1,104 @@
+{
+    "homeheader":{
+        "speciality":"chuyên khoa",
+        "searchdoctor":"Tìm bác sĩ",
+        "health-facility":"Cơ Sở y tế",
+        "select-room":"Chọn bệnh viện phòng khám",
+        "doctor":"Bác sĩ",
+        "select-doctor":"Chọn bác sĩ giỏi",
+        "Examination-package":"Gói khám",
+        "chek-health":"Khám sức khoẻ tổng quát",
+        "support":"Hỗ trợ",
+        "welcome":"Xin chào,"
+    },
+    "banner":{
+        "medical-background":"nền tảng y tế",
+        "health-care":"chăm sóc sức khoẻ toàn diện",
+        "specialist-examination":"khám chuyên khoa",
+        "remote-examination":"khám từ xa",
+        "general-examination":"khám tổng quát",
+        "medical-test":"xét nghiệm y học",
+        "mental-health":"sức khoẻ tinh thần",
+        "dental-examination":"khám nha khoa",
+        "surgery-package":"gói phẫu thuật",
+        "medical-products":"sản phẩm y khoa",
+        "business-health":"sức khoẻ D.Nghiệp"
+    },
+    "specialty":{
+        "Popular-specialties":"Chuyên khoa phổ biến",
+        "see-more":"XEM THÊM",
+        "Musculoskeletal":"Cơ xương khớp",
+        "Nerve":"Thần kinh",
+        "Digestion":"Tiêu hoá",
+        "Heart":"Tim mạch",
+        "Ear-nose-study":"Tai mũi học",
+        "Spine":"Cột sống",
+        "Traditional-medicine":"Y học cổ truyền",
+        "Acupuncture":"Châm cứu",
+        "Obstetrics-Gynecology":"Sản phụ khoa",
+        "Supersonic":"Siêu âm",
+        "Pediatrics":"Nhi khoa",
+        "Dermatology":"Da liễu",
+        "Hepatitis":"Bệnh viêm gan",
+        "Mental-health":"Sức khoẻ tâm thần",
+        "immune-allergy":"Dị ứng miễn dịch",
+        "Lung":"Phổi",
+        "Extranervous-system":"Ngoại thần kinh",
+        "Ophthalmology":"Chuyên khoa mắt",
+        "Urinary-kidney":"Thận tiết niệu",
+        "Medical":"Nội khoa",
+        "General-examination":"Khám tổng quát",
+        "dentistry":"Nha khoa"
+    },
+
+    "medical":{
+        "medical-facility":"Cơ sở y tế nổi bật",
+        "search":"Tìm kiếm",
+        "Vietduc":"Bệnh viện Hữu nghị Việt Đức",
+        "Choray":"Bệnh viện Chợ Rẫy",
+        "Yduoc":"Phòng khám Bệnh viện Đại học Y Dược 1",
+        "Benhvien108":"Trung tâm Khám sức khỏe định kỳ, Bệnh viện Trung ương Quân đội 108",
+        "Hungviet":"Bệnh viện Ung bướu Hưng Việt",
+        "Medlatec":"Hệ thống y tế MEDLATEC",
+        "Diag":"Trung tâm xét nghiệm Diag Laboratories",
+        "Thucuc":"Hệ thống Y tế Thu Cúc TCI"
+    },
+    "doctor":{
+        "doctor-popular":"Bác sĩ nổi bật tuần qua",
+        "see-more":"XEM THÊM"
+    },
+    "menu": {
+        "admin":{
+            "manage-user":"Người dùng",
+            "manage-doctor":"Quản lý bác sĩ",
+            "manage-admin":"Quản lý Admin",
+            "crud":"CRUD user",
+            "crud-redux":"CRUD Redux",
+            "clinic":"Phòng khám",
+            "manage-clinic":"Quản lý phòng khám",
+            "specialty":"Chuyên khoa",
+            "manage-specialty":"Quản lý chuyên khoa",
+            "handbook":"Cẩm nang",
+            "manage-handbook":"Quản lý cẩm nang"
+        }
+
+    },
+    "manage-user":{
+        "add":"Thêm mới người dùng",
+        "email":"Email",
+        "password":"Mật khẩu",
+        "first-name":"Tên",
+        "last-name":"Họ",
+        "phone-number":"Số điện thoại",
+        "address":"Địa chỉ",
+        "action":"Hành động",
+        "gender":"Giới tính",
+        "position":"Chức danh",
+        "role":"Vai trò",
+        "image":"Ảnh",
+        "submit":"Lưu",
+        "update":"Lưu thay đổi",
+        "upload":"Tải ảnh",
+        "pla-email":"Nhập email"
+    }
+}
