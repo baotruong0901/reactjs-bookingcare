@@ -1,5 +1,5 @@
 import actionTypes from './actionTypes';
-import { getAllCodeApi ,CreateNewUserApi,getAllUsers,DeleteUserApi,updateUserApi,getTopDoctorHomeApi,getAllDoctorsApi,saveDoctorApi} from '../../services/userService';
+import { getAllCodeApi ,CreateNewUserApi,getAllUsers,DeleteUserApi,updateUserApi,getTopDoctorHomeApi,getAllDoctorsApi,saveDoctorApi,getDetailInforDoctorApi} from '../../services/userService';
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 // export const fetchGenderStart = () => ({
@@ -235,27 +235,51 @@ export const fetchAllDoctorsFaild = ()=>({
     type:actionTypes.FETCH_ALL_DOCTORS_FAILDED
 })
 
-// export const saveDoctor = (data) =>{
-//     return async (dispatch,getState)=>{
-//         try{
-//             let res=await saveDoctorApi(data)
-//             if(res && res.errCode ===0){
-//                 toast.success('Save information doctor succeed!')
-//                dispatch(fetchSaveDoctorSuccess())
-//             }else{
-//                 toast.success('Save information doctor failed!!')
-//                 dispatch(fetchSaveDoctorFaild())
-//             }
-//         }catch(err){
-//             dispatch(fetchSaveDoctorFaild())
-//             console.log('saveDoctor error',err);
-//         }
-//     }
-// }
+export const saveDoctor = (data) =>{
+    return async (dispatch,getState)=>{
+        try{
+            let res=await saveDoctorApi(data)
+            if(res && res.errCode ===0){
+                toast.success('Save information doctor succeed!')
+               dispatch(fetchSaveDoctorSuccess())
+            }else{
+                toast.error('Save information doctor failed!!')
+                dispatch(fetchSaveDoctorFaild())
+            }
+        }catch(err){
+            dispatch(fetchSaveDoctorFaild())
+            console.log('saveDoctor error',err);
+        }
+    }
+}
 
-// export const fetchSaveDoctorSuccess = ()=>({
-//     type:actionTypes.SAVE_DOCTOR_SUCCESS,
-// })
-// export const fetchSaveDoctorFaild = ()=>({
-//     type:actionTypes.SAVE_DOCTOR_FAILDED
-// })
+export const fetchSaveDoctorSuccess = ()=>({
+    type:actionTypes.SAVE_DOCTOR_SUCCESS,
+})
+export const fetchSaveDoctorFaild = ()=>({
+    type:actionTypes.SAVE_DOCTOR_FAILDED
+})
+
+export const fetchDetailInfoDoctor = (id) =>{
+    return async (dispatch,getState)=>{
+        try{
+            let res=await getDetailInforDoctorApi(id)
+            if(res && res.errCode ===0){
+               dispatch(fetchDetailInfoDoctorSuccess(res.data))
+            }else{
+                dispatch(fetchDetailInfoDoctorFaild())
+            }
+        }catch(err){
+            dispatch(fetchDetailInfoDoctorFaild())
+            console.log('fetchAllDoctors error',err);
+        }
+    }
+}
+
+export const fetchDetailInfoDoctorSuccess = (data)=>({
+    type:actionTypes.FETCH_DETAIL_INFO_DOCTOR_SUCCESS,
+    detailDoctor:data
+})
+export const fetchDetailInfoDoctorFaild = ()=>({
+    type:actionTypes.FETCH_DETAIL_INFO_DOCTOR_FAILDED
+})

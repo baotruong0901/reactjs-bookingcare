@@ -1,8 +1,5 @@
 
-ul,li{
-    text-decoration: none;
-    list-style: none;
-}
+
 .fixed{
     position: sticky;
     z-index: 1000;
@@ -10,6 +7,10 @@ ul,li{
     top: 0;
 }
 .home-header{
+    ul,li{
+        text-decoration: none;
+        list-style: none;
+    }
     background: white;
     height: 80px;
     .home-header-content{
@@ -25,6 +26,7 @@ ul,li{
                 }
             }
             .header-logo{
+                cursor: pointer;
                 background: url('../../assets/images/bookingcare-2020.svg') center no-repeat;
                 height: 40px;
                 aspect-ratio: auto 160 / 40;
@@ -77,6 +79,10 @@ ul,li{
     }
 }
 .home-header-banner{
+    ul,li{
+        text-decoration: none;
+        list-style: none;
+    }
     position: relative;
     .background-header{
         background:url('../../assets/images/bookingcare-cover-4.jpeg');

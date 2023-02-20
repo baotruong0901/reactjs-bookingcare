@@ -7,8 +7,7 @@ import './Doctor.scss'
 import { FormattedMessage } from 'react-intl';
 import * as actions from '../../store/actions'
 import { LANGUAGES } from '../../utils';
-
-
+import { withRouter } from 'react-router';
 class Doctor extends Component {
     constructor(props) {
         super(props);
@@ -40,6 +39,12 @@ class Doctor extends Component {
       }
       beforeChange = (prev, next) => {
         this.setState({ index: next });
+      }
+
+      handleViewDetailDoctor = (doctor)=>{
+        if(this.props.history){
+            this.props.history.push(`/detail_doctor/${doctor.id}`)
+        }
       }
     render() {
         let settings = {
@@ -97,9 +102,11 @@ class Doctor extends Component {
                                         imageBase64=imageBuffer.toString('binary')
                                     }
                                     let nameVi=`${item.positionData.valueVi}, ${item.firstName} ${item.lastName}`
-                                    let nameEn=`${item.positionData.valueEn}, ${item.firstName} ${item.lastName}`
+                                    let nameEn=`${item.positionData.valueEn}, ${item.lastName} ${item.firstName}`
                                     return(
-                                        <div key={index} className='customize pb-5'>
+                                        <div key={index} className='customize pb-5'
+                                            onClick={()=>this.handleViewDetailDoctor(item)}
+                                        >
                                             <div className='box-image'>
                                                 <div className='image' style={{ backgroundImage: `url(${imageBase64})`}}></div>
                                             </div>
@@ -143,4 +150,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Doctor);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Doctor));

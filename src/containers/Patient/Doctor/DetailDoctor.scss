@@ -1,0 +1,38 @@
+.doctor-detail{
+    .intro-doctor{
+        // background-color: #f5f5f5;
+        .content-left{
+            width: 25%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 120px;
+            height: 120px;
+            margin: 0.5rem;
+            border-radius: 50%;
+        }
+        .content-right{
+            width: 42%;
+            padding-left: 10px;
+            .title-name{
+                padding-top: 10px;
+                padding-bottom: 10px;
+                font-size: 26px;
+                font-weight: 400;
+            }
+        }
+    }
+    .schedule-doctor{
+        // border: 1px solid red;
+        //     height: 80px;
+    }
+    .detail-info-doctor{
+        border-top:1px solid #d3d3d3 ;
+        padding: 1rem;
+        background-color: #f5f5f5;
+    }
+    .comment-doctor{
+        // border: 1px solid red;
+        //     height: 80px;
+    }
+}

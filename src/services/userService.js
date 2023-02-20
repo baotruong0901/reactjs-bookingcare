@@ -32,10 +32,13 @@ const getAllDoctorsApi=()=>{
     return axios.get(`/api/get-all-doctors`)
 }
 
-// const saveDoctorApi=()=>{
-//     return axios.post(`/api/save-info-doctor`)
-// }
+const saveDoctorApi=(data)=>{
+    return axios.post(`/api/save-info-doctor`,data)
+}
 
+const getDetailInforDoctorApi=(id)=>{
+    return axios.get(`/api/get-info-doctor-by-id?id=${id}`)
+}
 
 
 export {
@@ -47,5 +50,6 @@ export {
     getAllCodeApi,
     getTopDoctorHomeApi,
     getAllDoctorsApi,
-    // saveDoctorApi,
+    saveDoctorApi,
+    getDetailInforDoctorApi,
 }

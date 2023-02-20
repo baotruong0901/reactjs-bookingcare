@@ -5,9 +5,14 @@
     .customize{
         height: 17.5rem;
         border: 1px solid #dedede;
-        // width: 16.875rem;
         padding-left: 0;
+        cursor: pointer;
         position: relative;
+        &:hover{
+            h3{
+                color: #45c3d2;
+            }
+        }
         .box-image{
             
             height: 11.25rem;
@@ -21,7 +26,7 @@
                 width: 9rem;
                 height: 9rem;
                 border-radius: 50%;
-                background-position: center;
+                background-position: top;
                 background-repeat: no-repeat;
                 background-size: cover;
             }

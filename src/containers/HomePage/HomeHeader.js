@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './HomeHeader.scss'
 import { FormattedMessage } from 'react-intl';
-
+import { withRouter } from 'react-router';
 
 import banner1 from '../../assets/images/khamchuyenkhoa.png'
 import banner2 from '../../assets/images/khamtuxa.png'
@@ -64,8 +64,10 @@ class HomeHeader extends Component {
     changeLanguage = (language)=>{
         this.props.changeLanguageAppRedux(language)
     }
-    changeOnScroll=()=>{
-        
+    returnHome=()=>{
+        if(this.props.history){
+            this.props.history.push(`/home`)
+        }
     }
     render() {
         let banner=this.state.banner
@@ -79,7 +81,7 @@ class HomeHeader extends Component {
                                 <button>
                                     <i className="fas fa-bars"></i>
                                 </button>
-                                <div className='header-logo'></div>
+                                <div className='header-logo' onClick={()=>this.returnHome()}></div>
                             </div>
                             <div className='center-content col-6 d-flex align-items-center justify-content-between'>
                                 <div className='child-content'>
@@ -120,6 +122,7 @@ class HomeHeader extends Component {
                         </div>
                     </div>
                 </div>
+                {this.props.isShowBanner === true && 
                 <div className='home-header-banner'>
                     <div className='background-header'>
                             <div className='box-content '>
@@ -152,6 +155,7 @@ class HomeHeader extends Component {
                             </div>
                         </div>
                 </div>
+                }
                 
             </React.Fragment>
         )
@@ -173,4 +177,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomeHeader);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(HomeHeader));
