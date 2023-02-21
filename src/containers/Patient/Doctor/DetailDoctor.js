@@ -4,19 +4,23 @@ import HomeHeader from '../../HomePage/HomeHeader';
 import * as actions from '../../../store/actions'
 import './DetailDoctor.scss'
 import { LANGUAGES } from '../../../utils';
+import DoctorSchedule from './DoctorSchedule';
 class DetailDoctor extends Component {
 
      
     constructor(props){
         super(props)
-        this.state=[
-
-        ]
+        this.state={
+            currentDoctorId:-1
+        }
     }
 
     componentDidMount() {
         if(this.props.match && this.props.match.params && this.props.match.params.id){
             let id= this.props.match.params.id
+            this.setState({
+                currentDoctorId:id
+            })
             this.props.fetchDetailInfoDoctor(id)
         }
     }
@@ -64,24 +68,31 @@ class DetailDoctor extends Component {
                         </div>
                     </div>
 
-                            <div className='schedule-doctor'>
-                                <div className='container'>
-
+                    <div className='schedule-doctor py-4'>
+                        <div className='container'>
+                            <div className='schedule-doctor-container d-flex'>
+                                <div className='content-left'>
+                                    <DoctorSchedule currentDoctorId={this.state.currentDoctorId} />
+                                </div>
+                                <div className='content-right'>
+                                
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-                            <div className='detail-info-doctor'>
+                    <div className='detail-info-doctor'>
                                 <div className='container'>
                                 {detailDoctor && detailDoctor.Markdown && detailDoctor.Markdown.contentHTML
                                     && <div dangerouslySetInnerHTML={{ __html: detailDoctor.Markdown.contentHTML }} />
                                 }
                                 </div>
-                            </div>
-
-                            <div className='comment-doctor'>
-
-                            </div>
                     </div>
+
+                    <div className='comment-doctor'>
+
+                    </div>
+                </div>
             </>
         )
     }

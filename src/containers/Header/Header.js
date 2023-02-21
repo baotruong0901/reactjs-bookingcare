@@ -3,14 +3,39 @@ import { connect } from 'react-redux';
 
 import * as actions from "../../store/actions";
 import Navigator from '../../components/Navigator';
-import { adminMenu } from './menuApp';
+import { adminMenu , doctorMenu} from './menuApp';
 import './Header.scss';
-import { LANGUAGES } from '../../utils/constant';
+import { LANGUAGES, USER_ROLE } from '../../utils/constant';
 import { FormattedMessage } from 'react-intl';
+import _ from 'lodash';
 
 class Header extends Component {
+    constructor(props){
+        super(props)
+        this.state={
+            menuApp:[]
+        }
+    }
     handleChangeLangage = (language)=>{
         this.props.changeLanguageAppRedux(language)
+    }
+
+    componentDidMount=()=>{
+        let {userInfo}=this.props
+        let menu=[]
+        console.log(userInfo);
+        if(userInfo && !_.isEmpty(userInfo)){
+            let role=userInfo.roleId
+            if(role===USER_ROLE.ADMIN){
+                menu=adminMenu
+            }
+            if(role===USER_ROLE.DOCTOR){
+                menu=doctorMenu
+            }
+        }
+        this.setState({
+            menuApp:menu
+        })
     }
     render() {
         const { processLogout,language,userInfo } = this.props;
@@ -19,12 +44,12 @@ class Header extends Component {
                 <div className='container d-flex justify-content-between'>
                     {/* thanh navigator */}
                     <div className="header-tabs-container">
-                        <Navigator menus={adminMenu} />
+                        <Navigator menus={this.state.menuApp} />
                     </div>
 
                     {/* nút logout */}
                     <div className="language">
-                        <span className='welcome'><FormattedMessage id="homeheader.welcome" /> {userInfo && userInfo.firstName ? userInfo.firstName : 'bao'}!</span>
+                        <span className='welcome'><FormattedMessage id="homeheader.welcome" /> {userInfo && userInfo.firstName && userInfo.lastName && language===LANGUAGES.VI ? `${userInfo.firstName} ${userInfo.lastName}` : `${userInfo.lastName} ${userInfo.firstName}`}</span>
                         <span className={language ===LANGUAGES.VI ? "language-vi active" : "language-vi"} onClick={()=>this.handleChangeLangage(LANGUAGES.VI)}>Vi</span>
                         <span className={language ===LANGUAGES.EN ? "language-en active" : "language-en"} onClick={()=>this.handleChangeLangage(LANGUAGES.EN)}>En</span>
                         <div className="btn btn-logout" onClick={processLogout} title="Log out">

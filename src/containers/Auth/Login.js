@@ -42,7 +42,7 @@ class Login extends Component {
             }
             if(data && data.errCode ===0){
                 //todo
-                this.props.userLoginSuccess(data.user)
+                this.props.userLoginSuccess(data.userData.user)
             }
         }catch(err){
             if (err.response) {
@@ -61,12 +61,21 @@ class Login extends Component {
         })
     }
 
+    handleKeyDown = (e)=>{
+        if(e.keyCode === 13){
+            this.handleLogin();
+        }
+    }
+
     render() {
         return (
            <>
                 <div className='Login'>
                     <div className='container d-flex justify-content-center'>
-                        <Form className='Login-form row p-5'>
+                        <Form 
+                        className='Login-form row p-5'
+                        onKeyDown={(e)=>this.handleKeyDown(e)}
+                        >
                             <div className='Login-header col-12 mb-5 mt-1'>
                                 Login
                             </div>
@@ -81,7 +90,9 @@ class Login extends Component {
                                 <Form.Label className='label'>Password</Form.Label>
                                 <Form.Control className='input' name='password' type={this.state.isShowPassword ? 'text' :'password' } placeholder="Enter your password"
                                     value={this.state.password} 
-                                    onChange={(e)=>this.handleOnchangeInput(e)}>
+                                    onChange={(e)=>this.handleOnchangeInput(e)}
+                                    
+                                    >
                                 </Form.Control>
                                 <span onClick={()=>this.handleShowHidePassword()}>
                                     <i className={this.state.isShowPassword ? 'fas fa-eye-slash' : 'fas fa-eye'}></i>
@@ -92,9 +103,11 @@ class Login extends Component {
                                     {this.state.errMessage}
                                 </i>
                             </div>
-                            <Button className='btn-submit mb-4 col-12'
-                            onClick={(e)=>this.handleLogin(e)}>
-                                 Log in
+                            <Button
+                                className='btn-submit mb-4 col-12'
+                                onClick={(e)=>this.handleLogin(e)}
+                                >
+                                Log in
                             </Button>
                             <div className='Forgot-password col-12 mb-5'>
                                 Forgot your password?

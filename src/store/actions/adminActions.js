@@ -283,3 +283,28 @@ export const fetchDetailInfoDoctorSuccess = (data)=>({
 export const fetchDetailInfoDoctorFaild = ()=>({
     type:actionTypes.FETCH_DETAIL_INFO_DOCTOR_FAILDED
 })
+
+
+export const fetchAllCodeScheduleTime = () =>{
+    return async (dispatch,getState)=>{
+        try{
+            let res=await getAllCodeApi('TIME')
+            if(res && res.errCode ===0){
+               dispatch(fetchAllCodeScheduleTimeSuccess(res.data))
+            }else{
+                dispatch(fetchAllCodeScheduleTimeFaild())
+            }
+        }catch(err){
+            dispatch(fetchAllCodeScheduleTimeFaild())
+            console.log('fetchAllDoctors error',err);
+        }
+    }
+}
+
+export const fetchAllCodeScheduleTimeSuccess = (data)=>({
+    type:actionTypes.FETCH_ALLCODE_SCHEDULE_TIME_SUCCESS,
+    dataTime:data
+})
+export const fetchAllCodeScheduleTimeFaild = ()=>({
+    type:actionTypes.FETCH_ALLCODE_SCHEDULE_TIME_FAILDED
+})

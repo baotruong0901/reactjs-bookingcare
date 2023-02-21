@@ -80,6 +80,9 @@
             "manage-specialty":"Quản lý chuyên khoa",
             "handbook":"Cẩm nang",
             "manage-handbook":"Quản lý cẩm nang"
+        },
+        "doctor":{
+            "manage-schedule":"Quản lý kế hoạch khám bệnh"
         }
 
     },
@@ -100,5 +103,19 @@
         "update":"Lưu thay đổi",
         "upload":"Tải ảnh",
         "pla-email":"Nhập email"
+    },
+    "manage-schedule":{
+        "title":"Quản lý kế hoạch khám bệnh của bác sĩ",
+        "choose-doctor":"Chọn bác sĩ:",
+        "choose-date":"Chọn ngày:",
+        "save":"Lưu thông tin"
+    },
+    "patient":{
+        "detail-doctor":{
+            "schedule":"lịch khám",
+            "no-calendar":"Không có lịch hẹn trong thời gian này, vui lòng chọn thời gian khác!",
+            "choose":"Chọn ",
+            "book-free":" và đặt(Phí đặt lịch 0đ)"
+        }
     }
 }
